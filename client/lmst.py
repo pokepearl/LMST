@@ -7,6 +7,15 @@ from confighandler import *
 class LMSTShell(cmd.Cmd):
     intro = 'Welcome to LMST. Type \'help\' for a list of commands'
     prompt = '(LMST) '
+
+    def emptyline(self):
+        """Called when an empty line is entered in response to the prompt.
+        If this method is not overridden, it repeats the last nonempty
+        command entered.
+        """
+        if self.lastcmd:
+            self.lastcmd = ""
+            return self.onecmd('\n')
     def do_play(self,arg):
         pass
     def do_quit(self, arg):
