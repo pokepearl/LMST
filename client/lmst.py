@@ -12,6 +12,10 @@ class LMSTShell(cmd.Cmd):
         stopmpv()
         time.sleep(3)
         raise SystemExit(0)
+    def do_pause(self,args):
+        mpv_pause()
+    def do_resume(self,args):
+        mpv_resume()
 
 if __name__ == '__main__':
     startmpv()

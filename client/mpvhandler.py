@@ -12,3 +12,9 @@ def startmpv():
 def stopmpv():
     print('Stopping MPV...')
     subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["quit"] }\' | socat - /tmp/LMST-MPV-socket'], shell=False, stdout=subprocess.PIPE)
+def mpv_pause():
+    print('Pausing...')
+    subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["set_property", "pause", "yes"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdout=subprocess.PIPE)
+def mpv_resume():
+    print('Resuming Playback...')
+    subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["set_property", "pause", "no"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdout=subprocess.PIPE)
