@@ -16,6 +16,9 @@ class LMSTShell(cmd.Cmd):
         mpv_pause()
     def do_resume(self,args):
         mpv_resume()
+    def do_playdebug(self,args):
+        http = args.split()
+        mpv_playhttp(http[0])
 
 if __name__ == '__main__':
     startmpv()
