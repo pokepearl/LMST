@@ -9,3 +9,6 @@ def startmpv():
     if '"Connection refused' not in pcmd.communicate()[0].decode('utf-8'):
         pass
     print('MPV Should be Online, if you see \'Connection Refused\' try reinstalling MPV')
+def stopmpv():
+    print('Stopping MPV...')
+    subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["quit"] }\' | socat - /tmp/LMST-MPV-socket'], shell=False, stdout=subprocess.PIPE)
