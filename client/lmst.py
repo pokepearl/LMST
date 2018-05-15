@@ -2,6 +2,7 @@
 import time
 import cmd
 from mpvhandler import *
+from confighandler import *
 # Setup CMD commands
 class LMSTShell(cmd.Cmd):
     intro = 'Welcome to LMST. Type \'help\' for a list of commands'
@@ -21,5 +22,6 @@ class LMSTShell(cmd.Cmd):
         mpv_playhttp(http[0])
 
 if __name__ == '__main__':
+    createconfig()
     startmpv()
     LMSTShell().cmdloop()

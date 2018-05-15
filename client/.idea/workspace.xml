@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/confighandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confighandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/confighandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lmst.py" beforeDir="false" afterPath="$PROJECT_DIR$/lmst.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,15 +13,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1526345358432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1526345951620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lmst.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lmst.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lmst.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="360">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="e#23#34#0" expanded="true" />
               </folding>
@@ -41,11 +41,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confighandler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="confighandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/confighandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="135">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding>
+                <element signature="e#23#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,9 +69,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/lmst.py" />
         <option value="$PROJECT_DIR$/mpvhandler.py" />
         <option value="$PROJECT_DIR$/confighandler.py" />
+        <option value="$PROJECT_DIR$/lmst.py" />
       </list>
     </option>
   </component>
@@ -264,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526345305873</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Start work on Config File handler">
+      <created>1526345641107</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526345641107</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -336,7 +346,8 @@
     <MESSAGE value="Add MPV exit code" />
     <MESSAGE value="Add Pause &amp; Resume commands" />
     <MESSAGE value="Add debug play command and method to block output from media player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add debug play command and method to block output from media player" />
+    <MESSAGE value="Start work on Config File handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start work on Config File handler" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lmst.py">
@@ -386,12 +397,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lmst.py">
+    <entry file="file://$PROJECT_DIR$/confighandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="135">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding>
-            <element signature="e#23#34#0" expanded="true" />
+            <element signature="e#23#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -406,10 +417,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/confighandler.py">
+    <entry file="file://$PROJECT_DIR$/lmst.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
