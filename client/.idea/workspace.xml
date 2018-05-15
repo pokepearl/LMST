@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/confighandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lmst.py" beforeDir="false" afterPath="$PROJECT_DIR$/lmst.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpvhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpvhandler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1526345159305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1526345358432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -30,14 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mpvhandler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mpvhandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mpvhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="163" selection-start-line="7" selection-start-column="163" selection-end-line="7" selection-end-column="163" />
+            <state>
+              <caret selection-end-column="22" />
               <folding>
                 <element signature="e#23#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confighandler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/confighandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -60,6 +68,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/lmst.py" />
         <option value="$PROJECT_DIR$/mpvhandler.py" />
+        <option value="$PROJECT_DIR$/confighandler.py" />
       </list>
     </option>
   </component>
@@ -248,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526343439999</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add debug play command and method to block output from media player">
+      <created>1526345305873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1526345305873</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -260,9 +276,9 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914045" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32914045" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.32914045" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -319,7 +335,8 @@
     <MESSAGE value="Add code to start MPV" />
     <MESSAGE value="Add MPV exit code" />
     <MESSAGE value="Add Pause &amp; Resume commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Pause &amp; Resume commands" />
+    <MESSAGE value="Add debug play command and method to block output from media player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add debug play command and method to block output from media player" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lmst.py">
@@ -381,11 +398,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mpvhandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="163" selection-start-line="7" selection-start-column="163" selection-end-line="7" selection-end-column="163" />
+        <state>
+          <caret selection-end-column="22" />
           <folding>
             <element signature="e#23#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/confighandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
