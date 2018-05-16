@@ -40,6 +40,12 @@ class LMSTShell(cmd.Cmd):
         """
         http = args.split()
         mpv_playhttp(http[0])
+    def do_updatehost(self,args):
+        """Update the location of the Database."""
+        pass
+    def do_updatedb(self):
+        """Grab the latest database file from the host."""
+        pass
 
 if __name__ == '__main__':
     createconfig()
