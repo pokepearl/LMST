@@ -13,15 +13,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1526781893876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1526785380327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="lmst.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lmst.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
+            <state relative-caret-position="332">
+              <caret line="55" column="69" lean-forward="true" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
               <folding>
                 <element signature="e#23#34#0" expanded="true" />
               </folding>
@@ -32,11 +32,8 @@
       <file leaf-file-name="mpvhandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mpvhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-              <folding>
-                <element signature="e#23#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="4" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -57,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/lmstconf.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -312,11 +309,19 @@
       <option name="project" value="LOCAL" />
       <updated>1526452853361</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Start implementing database host changer">
+      <created>1526782457017</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1526782457017</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.32914045" />
@@ -388,7 +393,8 @@
     <MESSAGE value="Add Config Writer" />
     <MESSAGE value="Stop MPV from displaying UI for music files" />
     <MESSAGE value="Add placeholders for database interaction commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add placeholders for database interaction commands" />
+    <MESSAGE value="Start implementing database host changer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start implementing database host changer" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lmst.py">
@@ -405,9 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -442,9 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -479,9 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="22" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,9 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="22" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,9 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="22" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,9 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="22" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,9 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="83" lean-forward="true" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mpvhandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/confighandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -669,14 +644,35 @@
     <entry file="file://$PROJECT_DIR$/lmstconf.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mpvhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/cmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lmst.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
+        <state relative-caret-position="332">
+          <caret line="55" column="69" lean-forward="true" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
           </folding>

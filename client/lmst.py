@@ -3,6 +3,7 @@ import time
 import cmd
 from mpvhandler import *
 from confighandler import *
+import requests
 # Setup CMD commands
 class LMSTShell(cmd.Cmd):
     intro = 'Welcome to LMST. Type \'help\' for a list of commands'
@@ -43,8 +44,18 @@ class LMSTShell(cmd.Cmd):
     def do_updatehost(self,args):
         """Update the location of the Database."""
         newhost = input('Enter the base URL for the Database: ')
-        newfolder = input('Enter the folder path for the Database: ')
+        newfolder = input('Enter the folder path for the Database (including beginning and end slash): ')
         newdb = input('Enter the file name of the Database: ')
+        newurl = str(newhost)+str(newfolder)+str(newdb)
+        try:
+            dbcheck = requests.get('http://'+str(newurl))
+        except:
+            print('ERR')
+            dbcheck.status_code = '404'
+        if dbcheck.status_code == '200':
+            print('Host check sucessful, writing new host to config')
+        else:
+            print('Host check unsucessful, Error Code:',dbcheck.status_code)
         pass
     def do_updatedb(self):
         """Grab the latest database file from the host."""
