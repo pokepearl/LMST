@@ -42,6 +42,9 @@ class LMSTShell(cmd.Cmd):
         mpv_playhttp(http[0])
     def do_updatehost(self,args):
         """Update the location of the Database."""
+        newhost = input('Enter the base URL for the Database: ')
+        newfolder = input('Enter the folder path for the Database: ')
+        newdb = input('Enter the file name of the Database: ')
         pass
     def do_updatedb(self):
         """Grab the latest database file from the host."""
