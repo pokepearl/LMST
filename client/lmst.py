@@ -50,13 +50,16 @@ class LMSTShell(cmd.Cmd):
         try:
             dbcheck = requests.get('http://'+str(newurl))
         except:
-            print('ERR')
             dbcheck.status_code = '404'
+            print('ERROR')
+            return
         if dbcheck.status_code == '200':
-            print('Host check sucessful, writing new host to config')
+            print('Host check successful, writing new host to config')
+            writeconfig('HTTP', 'host', str(newhost))
+            writeconfig('HTTP', 'dbdirectory', str(newfolder))
+            writeconfig('HTTP', 'dbname', str(newdb))
         else:
-            print('Host check unsucessful, Error Code:',dbcheck.status_code)
-        pass
+            print('Host Check Unsuccessful')
     def do_updatedb(self):
         """Grab the latest database file from the host."""
         pass
