@@ -1,1 +1,2 @@
-formic-py3=0.1.0
+formic-py3==0.1.0
+mutagen==1.40.0
