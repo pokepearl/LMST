@@ -27,8 +27,8 @@ for filename in filelist.qualified_files():
 # Configure SQLite
 connect = sqlite3.connect('lmst.db')
 cursor = connect.cursor()
-cursor.execute('DROP TABLE IF EXISTS songs')
-cursor.execute('CREATE TABLE songs (id text,title text,artist text,album text,length text, genre text)')
+cursor.execute('DROP TABLE IF EXISTS song')
+cursor.execute('CREATE TABLE song (id text,title text,artist text,album text,length text, genre text)')
 songindex = 0 # Variable for the song index in table
 for fname in musiclist:  # Start Scraping info from songs and append to DB
     songindex = songindex + 1

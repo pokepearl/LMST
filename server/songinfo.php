@@ -42,7 +42,7 @@ if ($_GET["id"] == "" ) {
 	print "ID argument missing from the URL, make sure the originating link includes one.";
 	exit(1);
 };
-$results = $db->query('SELECT * FROM songs WHERE id = "'. $_GET["id"] .'"');
+$results = $db->query('SELECT * FROM song WHERE id = "'. $_GET["id"] .'"');
 ?>
 <div class="Album-Table">
 <table style="width:100%" class="table">
