@@ -47,7 +47,8 @@ include 'config.php';
 <?php
 $results = $db->query('SELECT * FROM songs ORDER BY id');
 while ($row = $results->fetchArray()) {
-	echo "<tr><td>". $row['id'] ."</td><td>". $row['title'] ."</td><td>". $row['artist'] ."</td><td>". $row['album'] ."</td><td>". $row['length'] ."</td></tr>";
+// Properly Join Tables to allow reading from Album Tables for Link
+	echo "<tr><td>". $row['id'] ."</td><td><a href='songinfo.php?id=". $row['id']."'>". $row['title'] ."</a></td><td>". $row['artist'] ."</td><td><a href='albuminfo.php?id=". $row['id'] ."'>". $row['album'] ."</a></td><td>". $row['length'] ."</td></tr>";
 }
 ?>
 <!--      <tr>
