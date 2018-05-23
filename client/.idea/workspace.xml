@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="" />
+    <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbhandler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbhandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbhandler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -48,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbbuilder.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbbuilder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
               <folding>
                 <element signature="e#23#37#0" expanded="true" />
               </folding>
@@ -449,12 +451,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527055999768</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fix mistake in DB tables">
+      <created>1527056619110</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1527056619110</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.32914045" />
@@ -512,7 +520,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change prompt and intro message" />
     <MESSAGE value="Separate MPV-specific code into separate file" />
     <MESSAGE value="Add code to start MPV" />
     <MESSAGE value="Add MPV exit code" />
@@ -537,7 +544,8 @@
     <MESSAGE value="Prepare Database Handler for Client" />
     <MESSAGE value="Add Database Downloader" />
     <MESSAGE value="Add error handling to DB downloader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add error handling to DB downloader" />
+    <MESSAGE value="Fix mistake in DB tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix mistake in DB tables" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lmst.py">
@@ -903,22 +911,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
-          <folding>
-            <element signature="e#23#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbhandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding>
+            <element signature="e#23#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
