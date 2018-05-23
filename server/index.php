@@ -34,6 +34,7 @@ table {
 <!--Ignore the below php section, this imports the header file for the navbar -->
 <?php
 include 'header.php';
+include 'config.php';
 ?>
 <main role="main" class="container mx-auto">
 <!-- This Section is Centred, place your code in here -->
@@ -42,26 +43,23 @@ include 'header.php';
 <br>
 <h1> Welcome to LMST </h1>
 <br>
+<h2 align="center">Connection Info</h2><br>
 <div class="Index-Table">
 <table style="width:70%" class="table" align="center">
-		<tr>
-		<td width="25%">Connection Info:</td>
-		<td>Placeholder</td> 
-		</tr>
   
 		<tr>
-		<td>URL:</td>
-		<td>Placeholder</td> 
+		<td width="25%">URL:</td>
+		<td><?php echo $conn_url ?></td> 
 		</tr>
 	
 		<tr>
 		<td>Folder:</td>
-		<td>Placeholder</td> 
+		<td><?php echo $conn_folder ?></td> 
 		</tr>
 
 		<tr>
 		<td>DataBase:</td>
-		<td>Placeholder</td> 
+		<td><?php echo $conn_dbname ?></td> 
 		</tr>
 </table>
 </div>
