@@ -26,6 +26,7 @@ td, th {
 <!--Ignore the below php section, this imports the header file for the navbar -->
 <?php
 include 'header.php';
+include 'config.php';
 ?>
 <main role="main" class="container mx-auto">
 <!-- This Section is Centred, place your code in here -->
@@ -36,19 +37,27 @@ include 'header.php';
 	<table style="width:100%" class="table">
 		<thead>
 		<tr>
+		<th>ID:</th>
 		<th>Title:</th>
 		<th>Artist:</th>
 		<th>Album:</th>
 		<th>Length:</th>
 		</tr>
 		</thead>
-
-      <tr>
+<?php
+$results = $db->query('SELECT * FROM songs ORDER BY id');
+while ($row = $results->fetchArray()) {
+	echo "<tr><td>". $row['id'] ."</td><td>". $row['title'] ."</td><td>". $row['artist'] ."</td><td>". $row['album'] ."</td><td>". $row['length'] ."</td></tr>";
+}
+?>
+<!--      <tr>
     <td>Placeholder</td> 
     <td>Placeholder</td>
 	<td>Placeholder</td> 
     <td>Placeholder</td>
-  </tr>
+  </tr>-->
+</table>
+</div>
 
 </main>
 <!-- Bootstrap 4 JS Files -->
