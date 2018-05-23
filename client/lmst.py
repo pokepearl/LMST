@@ -61,9 +61,9 @@ class LMSTShell(cmd.Cmd):
             writeconfig('HTTP', 'dbname', str(newdb))
         else:
             print('Host Check Unsuccessful')
-    def do_updatedb(self):
+    def do_updatedb(self,arg):
         """Grab the latest database file from the host."""
-        pass
+        downloaddb(readconfig("HTTP","host"),readconfig("HTTP","dbdirectory"),readconfig("HTTP","dbname"),readconfig("FILE","localdb"))
 
 if __name__ == '__main__':
     createconfig()
