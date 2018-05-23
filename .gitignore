@@ -105,3 +105,7 @@ venv.bak/
 
 # Project Specific
 lmstconf.ini
+*.db
+*.opus
+*.mp3
+*.ogg
