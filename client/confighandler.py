@@ -7,8 +7,8 @@ def createconfig():
     if os.path.isfile('lmstconf.ini') == True:
         pass
     else:
-        config['HTTP'] = {'host': 'localhost',
-                          'dbdirectory': 'cache',
+        config['HTTP'] = {'host': 'http://',
+                          'dbdirectory': '/cache/',
                           'dbname': 'lmst.db'}
         config['FILE'] = {'localdb': 'files/lmst.db'}
         with open('lmstconf.ini', 'w') as configfile:
