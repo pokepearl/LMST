@@ -6,3 +6,4 @@ $conn_dbname = "lmst.db";
 
 //SQLite Preparation (DO NOT TOUCH)
 $db = new SQLite3($conn_dbname);
+?>

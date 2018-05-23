@@ -28,8 +28,10 @@ for filename in filelist.qualified_files():
 connect = sqlite3.connect('lmst.db')
 cursor = connect.cursor()
 cursor.execute('DROP TABLE IF EXISTS songs')
-cursor.execute('CREATE TABLE songs (title text,artist text,album text,length text)')
+cursor.execute('CREATE TABLE songs (id integer,title text,artist text,album text,length text)')
+songindex = 0 # Variable for the song index in table
 for fname in musiclist:  # Start Scraping info from songs and append to DB
+    songindex = songindex + 1
     # Parsing the command and running GREP appears to need multiple pipes, look into fixing this later
     parsefile1 = subprocess.Popen(["mutagen-inspect", fname], stdout=subprocess.PIPE) # Read File metadata
     parsefile2 = subprocess.Popen(["mutagen-inspect", fname], stdout=subprocess.PIPE)  # Read File metadata
@@ -61,6 +63,6 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     print('ARTIST',fileartist)
     print('ALBUM',filealbum)
     print('LENGTH', fileseconds)
-    cursor.execute('INSERT INTO songs VALUES (\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\')')
+    cursor.execute('INSERT INTO songs VALUES (\'' + str(songindex) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\')')
     connect.commit()
 connect.close()
