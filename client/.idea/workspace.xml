@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +11,11 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1527055977453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/client$dbbuilder.coverage" NAME="dbbuilder Coverage Results" MODIFIED="1527054645233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../server/db_builder" />
+    <SUITE FILE_PATH="coverage/client$dbbuilder.coverage" NAME="dbbuilder Coverage Results" MODIFIED="1527056564279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../server/db_builder" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lmst.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lmst.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lmst.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -29,16 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confighandler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/confighandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbhandler.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbhandler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbhandler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -62,8 +51,8 @@
       <file leaf-file-name="dbbuilder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
+            <state relative-caret-position="450">
+              <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
               <folding>
                 <element signature="e#23#37#0" expanded="true" />
               </folding>
@@ -98,11 +87,11 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/mpvhandler.py" />
         <option value="$PROJECT_DIR$/../server/db_builder/requirements.txt" />
-        <option value="$PROJECT_DIR$/../server/db_builder/dbbuilder.py" />
         <option value="$PROJECT_DIR$/confighandler.py" />
         <option value="$PROJECT_DIR$/lmstconf.ini" />
         <option value="$PROJECT_DIR$/dbhandler.py" />
         <option value="$PROJECT_DIR$/lmst.py" />
+        <option value="$PROJECT_DIR$/../server/db_builder/dbbuilder.py" />
       </list>
     </option>
   </component>
@@ -203,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lmst">
+  <component name="RunManager" selected="Python.dbbuilder">
     <configuration name="dbbuilder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="db_builder" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,8 +237,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lmst" />
         <item itemvalue="Python.dbbuilder" />
+        <item itemvalue="Python.lmst" />
       </list>
     </recent_temporary>
   </component>
@@ -472,7 +461,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914045" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.7364706" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32809225" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.32809225" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -890,30 +879,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
-          <folding>
-            <element signature="e#23#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lmstconf.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbhandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <element signature="e#23#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,6 +899,26 @@
           <caret line="17" column="12" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="12" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+          <folding>
+            <element signature="e#23#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
