@@ -44,6 +44,7 @@ if ($_GET["id"] == "" ) {
 	print "ID argument missing from the URL, make sure the originating link includes one.";
 	exit(1);
 };
+$resultsONE = $db->query('SELECT * FROM song WHERE album = "'. urldecode($_GET["id"]) .'" LIMIT 1');
 $results = $db->query('SELECT * FROM song WHERE album = "'. urldecode($_GET["id"]) .'"');
 $results2 = $db->query('SELECT count(id) as count FROM song WHERE album = "'. urldecode($_GET["id"]) .'"');
 ?>
@@ -52,14 +53,14 @@ $results2 = $db->query('SELECT count(id) as count FROM song WHERE album = "'. ur
 	<thead>
 		<tr>
 		<th width="30%">Title</th>
-		<th width="70%" colspan="2"><?php while ($row = $results->fetchArray()) {
+		<th width="70%" colspan="2"><?php while ($row = $resultsONE->fetchArray()) {
 				echo $row['album'];
 			}?></th> 
 		</tr>
 	</thead>
 		<tr>
 		<td>Artists</td>
-		<td colspan="2"><?php while ($row = $results->fetchArray()) {
+		<td colspan="2"><?php while ($row = $resultsONE->fetchArray()) {
 				echo $row['artist'];
 			}?></td> 
 		</tr>
@@ -73,7 +74,7 @@ $results2 = $db->query('SELECT count(id) as count FROM song WHERE album = "'. ur
 	
 		<tr>
 		<td>LMST Playback Command:</td>
-		<td colspan="2"><?php while ($row = $results->fetchArray()) {
+		<td colspan="2"><?php while ($row = $resultsONE->fetchArray()) {
 				echo "play album \"". $row['album']."\"";
 			}?></td> 
 		</tr>
