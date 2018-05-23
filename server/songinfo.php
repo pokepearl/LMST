@@ -26,6 +26,7 @@ td, th {
 <!--Ignore the below php section, this imports the header file for the navbar -->
 <?php
 include 'header.php';
+include 'config.php';
 ?>
 <!-- Bootstrap 4 JS Files -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -36,27 +37,42 @@ include 'header.php';
 <br>
 <br>
 <br>
+<?php
+if ($_GET["id"] == "" ) {
+	print "ID argument missing from the URL, make sure the originating link includes one.";
+	exit(1);
+};
+$results = $db->query('SELECT * FROM songs WHERE id = "'. $_GET["id"] .'"');
+?>
 <div class="Album-Table">
 <table style="width:100%" class="table">
 	<thead>
 		<tr>
 		<th width="20%">Title:</th>
-		<th>Placeholder</th> 
+		<th><?php while ($row = $results->fetchArray()) {
+				echo $row['title'];
+			}?></th> 
 		</tr>
 	</thead>
 		<tr>
 		<td>Artist:</td>
-		<td>Placeholder</td> 
+		<td><?php while ($row = $results->fetchArray()) {
+				echo $row['artist'];
+			}?></td> 
 		</tr>
 		
 		<tr>
 		<td>Album:</td>
-		<td>Placeholder</td> 
+		<td><?php while ($row = $results->fetchArray()) {
+				echo $row['album'];
+			}?></td> 
 		</tr>
 		
 		<tr>
-		<td>Album:</td>
-		<td>Placeholder</td> 
+		<td>Length:</td>
+		<td><?php while ($row = $results->fetchArray()) {
+				echo "".$row['length']." seconds";
+			}?></td> 
 		</tr>
 		
 		<tr>
@@ -76,7 +92,9 @@ include 'header.php';
 		
 		<tr>
 		<td>LMST Playback Command:</td>
-		<td>Placeholder</td> 
+		<td><?php while ($row = $results->fetchArray()) {
+				echo "play song ".$row['id']."";
+			}?></td> 
 		</tr>
 </table>
 </div>
