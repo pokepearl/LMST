@@ -3,6 +3,7 @@ import time
 import cmd
 from mpvhandler import *
 from confighandler import *
+from dbhandler import *
 import requests
 # Setup CMD commands
 class LMSTShell(cmd.Cmd):
