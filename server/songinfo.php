@@ -75,20 +75,14 @@ $results = $db->query('SELECT * FROM songs WHERE id = "'. $_GET["id"] .'"');
 			}?></td> 
 		</tr>
 		
-		<tr>
-		<td>Track Number:</td>
-		<td>Placeholder</td> 
-		</tr>
 		
 		<tr>
 		<td>Genre:</td>
-		<td>Placeholder</td> 
+		<td><?php while ($row = $results->fetchArray()) {
+				echo $row['genre'];
+			}?></td> 
 		</tr>
 		
-		<tr>
-		<td>Release Year:</td>
-		<td>Placeholder</td> 
-		</tr>
 		
 		<tr>
 		<td>LMST Playback Command:</td>
