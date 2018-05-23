@@ -28,7 +28,7 @@ for filename in filelist.qualified_files():
 connect = sqlite3.connect('lmst.db')
 cursor = connect.cursor()
 cursor.execute('DROP TABLE IF EXISTS songs')
-cursor.execute('CREATE TABLE songs (id integer,title text,artist text,album text,length text)')
+cursor.execute('CREATE TABLE songs (id text,title text,artist text,album text,length text, genre text)')
 songindex = 0 # Variable for the song index in table
 for fname in musiclist:  # Start Scraping info from songs and append to DB
     songindex = songindex + 1
@@ -37,6 +37,7 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     parsefile2 = subprocess.Popen(["mutagen-inspect", fname], stdout=subprocess.PIPE)  # Read File metadata
     parsefile3 = subprocess.Popen(["mutagen-inspect", fname], stdout=subprocess.PIPE)  # Read File metadata
     parsefile4 = subprocess.Popen(["mutagen-inspect", fname], stdout=subprocess.PIPE)  # Read File metadata
+    parsefile5 = subprocess.Popen(["mutagen-inspect", fname], stdout=subprocess.PIPE)  # Read File metadata
     # Grep Title
     greptitle = subprocess.Popen(["grep","Title"], stdin=parsefile1.stdout,stdout=subprocess.PIPE) # Grep Title
     filetitle = greptitle.communicate()[0]
@@ -59,10 +60,15 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     fileseconds = fileseconds.replace('(', '')
     fileseconds = fileseconds.replace(')', '')
     fileseconds = fileseconds.replace(' ', '')
+    # Grep Genre
+    grepgenre = subprocess.Popen(["grep", "Genre"], stdin=parsefile5.stdout, stdout=subprocess.PIPE)  # Grep Album
+    filegenre = grepgenre.communicate()[0]
+    filegenre = re.sub("Genre=", '', filegenre.decode('UTF-8'))
     print('TITLE', filetitle)
     print('ARTIST',fileartist)
     print('ALBUM',filealbum)
     print('LENGTH', fileseconds)
-    cursor.execute('INSERT INTO songs VALUES (\'' + str(songindex) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\')')
+    print('GENRE',filegenre)
+    cursor.execute('INSERT INTO songs VALUES (\'' + str(songindex) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\',\'' + filegenre  + '\')')
     connect.commit()
 connect.close()
