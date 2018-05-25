@@ -11,10 +11,6 @@
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="songlist.php">Song List <span class="sr-only">(current)</span></a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="albumlist.php">Album List <span class="sr-only">(current)</span></a>
-      </li>
 	</ul>
   </div>
 </nav>
