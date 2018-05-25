@@ -44,18 +44,21 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     filetitle = greptitle.communicate()[0]
     filetitle = re.sub("Title=",'',filetitle.decode('UTF-8'), re.IGNORECASE)
     filetitle = re.sub("TITLE=", '', filetitle, re.IGNORECASE)
+    filetitle = filetitle.replace("\n","")
     # Grep Artist
     grepartist = subprocess.Popen(["grep","-i", "Artist"], stdin=parsefile2.stdout, stdout=subprocess.PIPE)  # Grep Artist
     fileartist = grepartist.communicate()[0]
     fileartist = re.sub("ALBUMARTIST=.*", '', fileartist.decode('UTF-8'), re.IGNORECASE)
     fileartist = re.sub("Artist=", '', fileartist, re.IGNORECASE)
     fileartist = re.sub("ARTIST=", '', fileartist, re.IGNORECASE)
+    fileartist = fileartist.replace("\n", "")
     # Grep Album
     grepalbum = subprocess.Popen(["grep","-i", "Album"], stdin=parsefile3.stdout, stdout=subprocess.PIPE)  # Grep Album
     filealbum = grepalbum.communicate()[0]
     filealbum = re.sub("ALBUMARTIST=.*", '', filealbum.decode('UTF-8'), re.IGNORECASE)
     filealbum = re.sub("Album=", '', filealbum, re.IGNORECASE)
     filealbum = re.sub("ALBUM=", '', filealbum, re.IGNORECASE)
+    filealbum = filealbum.replace("\n", "")
     # Grep Seconds
     grepseconds = subprocess.Popen(["grep","-i", "seconds"], stdin=parsefile4.stdout, stdout=subprocess.PIPE)  # Grep Album
     fileseconds = grepseconds.communicate()[0]
@@ -66,10 +69,12 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     fileseconds = fileseconds.replace('(', '')
     fileseconds = fileseconds.replace(')', '')
     fileseconds = fileseconds.replace(' ', '')
+    fileseconds = fileseconds.replace("\n", "")
     # Grep Genre
     grepgenre = subprocess.Popen(["grep","-i", "Genre"], stdin=parsefile5.stdout, stdout=subprocess.PIPE)  # Grep Album
     filegenre = grepgenre.communicate()[0]
     filegenre = re.sub("Genre=", '', filegenre.decode('UTF-8'), re.IGNORECASE)
+    filegenre = filegenre.replace("\n", "")
     # Get Path of file
     songfile = fname.replace(os.getcwd()+'/',"")
     cursor.execute('INSERT INTO song  VALUES (\'' + str(songindex).zfill((6)) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\',\'' + filegenre  + '\',\'' + str(urllib.parse.quote(songfile))  + '\')')
