@@ -21,7 +21,8 @@ class LMSTShell(cmd.Cmd):
                 songid = info[1]
                 readdb('song', songid)
             elif info[0] == "album":
-                pass
+                songid = info[1]
+                readdb('album', songid)
             else:
                 print('Invalid argument')
         except IndexError:
