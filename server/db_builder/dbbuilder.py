@@ -79,6 +79,6 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     #print('GENRE',filegenre)
     print(songfile)
     print(str(urllib.parse.quote(songfile)))
-    cursor.execute('INSERT INTO song  VALUES (\'' + str(songindex) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\',\'' + filegenre  + '\',\'' + str(urllib.parse.quote(songfile))  + '\')')
+    cursor.execute('INSERT INTO song  VALUES (\'' + str(songindex).zfill((6)) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\',\'' + filegenre  + '\',\'' + str(urllib.parse.quote(songfile))  + '\')')
     connect.commit()
 connect.close()
