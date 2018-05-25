@@ -47,20 +47,9 @@ class LMSTShell(cmd.Cmd):
         newhost = input('Enter the base URL for the Database: ')
         newfolder = input('Enter the folder path for the Database (including beginning and end slash): ')
         newdb = input('Enter the file name of the Database: ')
-        newurl = str(newhost)+str(newfolder)+str(newdb)
-        try:
-            dbcheck = requests.get('http://'+str(newurl))
-        except:
-            dbcheck.status_code = '404'
-            print('ERROR')
-            return
-        if dbcheck.status_code == '200':
-            print('Host check successful, writing new host to config')
-            writeconfig('HTTP', 'host', str(newhost))
-            writeconfig('HTTP', 'dbdirectory', str(newfolder))
-            writeconfig('HTTP', 'dbname', str(newdb))
-        else:
-            print('Host Check Unsuccessful')
+        writeconfig('HTTP', 'host', str(newhost))
+        writeconfig('HTTP', 'dbdirectory', str(newfolder))
+        writeconfig('HTTP', 'dbname', str(newdb))
     def do_updatedb(self,arg):
         """Grab the latest database file from the host."""
         downloaddb(readconfig("HTTP","host"),readconfig("HTTP","dbdirectory"),readconfig("HTTP","dbname"),readconfig("FILE","localdb"))
