@@ -18,7 +18,8 @@ class LMSTShell(cmd.Cmd):
         try:
             info = arg.split()
             if info[0] == "song":
-                pass
+                songid = info[1]
+                readdb('song', songid)
             elif info[0] == "album":
                 pass
             else:
