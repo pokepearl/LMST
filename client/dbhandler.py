@@ -24,3 +24,6 @@ def readdb(type,index):
             print('Album:',row[3])
             print('URL:',url)
             mpv_playhttp(url)
+    elif type == "album":
+        index = str(index).replace("%"," ")
+        print(index)
