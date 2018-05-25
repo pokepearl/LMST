@@ -15,7 +15,17 @@ class LMSTShell(cmd.Cmd):
             return self.onecmd('\n')
     def do_play(self,arg):
         """NOT YET IMPLEMENTED"""
-        pass
+        try:
+            info = arg.split()
+            if info[0] == "song":
+                pass
+            elif info[0] == "album":
+                pass
+            else:
+                print('Invalid argument')
+        except IndexError:
+            print('Invalid Argument, type song or album')
+
     def do_quit(self, arg):
         """
         Exit LMST. Safely quits MPV and shuts down.
