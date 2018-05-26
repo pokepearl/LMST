@@ -72,13 +72,6 @@ $results2 = $db->query('SELECT count(id) as count FROM song WHERE album = "'. ur
 			}?></td> 
 		</tr>
 	
-		<tr>
-		<td>LMST Playback Command:</td>
-		<td colspan="2"><?php while ($row = $resultsONE->fetchArray()) {
-				$albumfix = str_replace(" ","%",$row['album']);
-				echo "play album \"". $albumfix ."\"";
-			}?></td> 
-		</tr>
 </table>
 </div>
 <div class="Track-Table">
@@ -94,7 +87,7 @@ $results2 = $db->query('SELECT count(id) as count FROM song WHERE album = "'. ur
 <?php
 while ($row = $results->fetchArray()) {
 // Properly Join Tables to allow reading from Album Tables for Link
-	echo "<tr><td>". $row['id'] ."</td><td>". $row['title'] ."</td><td>". $row['length'] ."</td></tr>";
+	echo '<tr><td>'. $row['id'] .'</td><td><a href="songinfo.php?id='. $row['id'] .'">'. $row['title'] .'</a></td><td>'. $row['length'] .'</td></tr>';
 }
 ?>
 

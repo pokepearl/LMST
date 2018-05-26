@@ -20,9 +20,6 @@ class LMSTShell(cmd.Cmd):
             if info[0] == "song":
                 songid = info[1]
                 readdb('song', songid)
-            elif info[0] == "album":
-                songid = info[1]
-                readdb('album', songid)
             else:
                 print('Invalid argument')
         except IndexError:
@@ -67,8 +64,6 @@ class LMSTShell(cmd.Cmd):
         downloaddb(readconfig("HTTP","host"),readconfig("HTTP","dbdirectory"),readconfig("HTTP","dbname"),readconfig("FILE","localdb"))
     def do_stop(self,arg):
         mpv_reset()
-    def do_playnext(self,arg):
-        mpv_playnext()
 if __name__ == '__main__':
     createconfig()
     startmpv()

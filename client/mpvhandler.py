@@ -20,14 +20,13 @@ def mpv_pause():
 def mpv_resume():
     print('Resuming Playback...')
     subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["set_property", "pause", "no"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdout=subprocess.PIPE)
-def mpv_playhttp(url,append):
+def mpv_playhttp(url):
     print('Starting Playback...')
     print(url)
-    if append == "n":
-        subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "'+url+'"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
-    elif append == "y":
-        print('echo \'{ "command": [loadfile, "'+url+'", append] }\' | socat - /tmp/LMST-MPV-socket')
-        subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": [loadfile, "'+url+'", append] }\' | socat - /tmp/LMST-MPV-socket'],shell=False)
+    subprocess.Popen(
+        ['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "' + url + '"] }\' | socat - /tmp/LMST-MPV-socket'],
+        shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
+
 def mpv_reset():
     stopmpv()
     time.sleep(1)

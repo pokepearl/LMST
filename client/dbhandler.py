@@ -23,12 +23,6 @@ def readdb(type,index):
             print('Artist:', row[2])
             print('Album:',row[3])
             print('URL:',url)
-            mpv_playhttp(url, "n")
+            mpv_playhttp(url)
     elif type == "album":
-        index = str(index).replace("%"," ")
-        print('Now Playing:',index)
-        mpv_reset()
-        for row in cursor.execute('SELECT id,path FROM song WHERE album = ' + str(index) + ''):
-            print('Queuing ID', row[0])
-            url = readconfig("HTTP", "host") + readconfig("HTTP", "dbdirectory") + str(row[1])
-            mpv_playhttp(url, 'y')
+        pass
