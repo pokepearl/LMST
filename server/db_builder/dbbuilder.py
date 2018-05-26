@@ -44,13 +44,17 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     filetitle = greptitle.communicate()[0]
     filetitle = re.sub("Title=",'',filetitle.decode('UTF-8'), re.IGNORECASE)
     filetitle = re.sub("TITLE=", '', filetitle, re.IGNORECASE)
+    filetitle = re.sub("title=", '', filetitle, re.IGNORECASE)
     filetitle = filetitle.replace("\n","")
+    filetitle = filetitle.replace("\'", "")
+    #filetitle = filetitle.replace("\'", "")
     # Grep Artist
     grepartist = subprocess.Popen(["grep","-i", "Artist"], stdin=parsefile2.stdout, stdout=subprocess.PIPE)  # Grep Artist
     fileartist = grepartist.communicate()[0]
     fileartist = re.sub("ALBUMARTIST=.*", '', fileartist.decode('UTF-8'), re.IGNORECASE)
     fileartist = re.sub("Artist=", '', fileartist, re.IGNORECASE)
     fileartist = re.sub("ARTIST=", '', fileartist, re.IGNORECASE)
+    fileartist = re.sub("artist=", '', fileartist, re.IGNORECASE)
     fileartist = fileartist.replace("\n", "")
     # Grep Album
     grepalbum = subprocess.Popen(["grep","-i", "Album"], stdin=parsefile3.stdout, stdout=subprocess.PIPE)  # Grep Album
@@ -58,6 +62,7 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     filealbum = re.sub("ALBUMARTIST=.*", '', filealbum.decode('UTF-8'), re.IGNORECASE)
     filealbum = re.sub("Album=", '', filealbum, re.IGNORECASE)
     filealbum = re.sub("ALBUM=", '', filealbum, re.IGNORECASE)
+    filealbum = re.sub("album=", '', filealbum, re.IGNORECASE)
     filealbum = filealbum.replace("\n", "")
     # Grep Seconds
     grepseconds = subprocess.Popen(["grep","-i", "seconds"], stdin=parsefile4.stdout, stdout=subprocess.PIPE)  # Grep Album
@@ -74,9 +79,11 @@ for fname in musiclist:  # Start Scraping info from songs and append to DB
     grepgenre = subprocess.Popen(["grep","-i", "Genre"], stdin=parsefile5.stdout, stdout=subprocess.PIPE)  # Grep Album
     filegenre = grepgenre.communicate()[0]
     filegenre = re.sub("Genre=", '', filegenre.decode('UTF-8'), re.IGNORECASE)
+    filegenre = re.sub("genre=", '', filegenre, re.IGNORECASE)
     filegenre = filegenre.replace("\n", "")
     # Get Path of file
     songfile = fname.replace(os.getcwd()+'/',"")
+    print(filetitle)
     cursor.execute('INSERT INTO song  VALUES (\'' + str(songindex).zfill((6)) + '\',\'' + filetitle + '\',\'' + fileartist + '\',\'' + filealbum + '\',\'' + fileseconds + '\',\'' + filegenre  + '\',\'' + str(urllib.parse.quote(songfile))  + '\')')
     connect.commit()
 connect.close()
