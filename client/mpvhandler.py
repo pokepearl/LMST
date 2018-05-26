@@ -20,6 +20,9 @@ def mpv_pause():
 def mpv_resume():
     print('Resuming Playback...')
     subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["set_property", "pause", "no"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdout=subprocess.PIPE)
-def mpv_playhttp(url):
+def mpv_playhttp(url,append):
     print('Starting Playback...')
-    subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "'+url+'"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
+    if append == "n":
+        subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "'+url+'"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
+    elif append == "y":
+        subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "' + url + ', "append-play"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
