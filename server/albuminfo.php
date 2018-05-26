@@ -75,7 +75,8 @@ $results2 = $db->query('SELECT count(id) as count FROM song WHERE album = "'. ur
 		<tr>
 		<td>LMST Playback Command:</td>
 		<td colspan="2"><?php while ($row = $resultsONE->fetchArray()) {
-				echo "play album \"". $row['album']."\"";
+				$albumfix = str_replace(" ","%",$row['album']);
+				echo "play album \"". $albumfix ."\"";
 			}?></td> 
 		</tr>
 </table>
