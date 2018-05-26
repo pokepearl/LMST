@@ -65,7 +65,8 @@ class LMSTShell(cmd.Cmd):
     def do_updatedb(self,arg):
         """Grab the latest database file from the host."""
         downloaddb(readconfig("HTTP","host"),readconfig("HTTP","dbdirectory"),readconfig("HTTP","dbname"),readconfig("FILE","localdb"))
-
+    def do_stop(self,arg):
+        mpv_reset()
 if __name__ == '__main__':
     createconfig()
     startmpv()
