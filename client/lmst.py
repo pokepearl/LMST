@@ -14,7 +14,9 @@ class LMSTShell(cmd.Cmd):
             self.lastcmd = ""
             return self.onecmd('\n')
     def do_play(self,arg):
-        """NOT YET IMPLEMENTED"""
+        """Plays Songs
+        Usage: play song {id}
+        """
         try:
             info = arg.split()
             if info[0] == "song":

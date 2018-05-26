@@ -22,7 +22,6 @@ def mpv_resume():
     subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["set_property", "pause", "no"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdout=subprocess.PIPE)
 def mpv_playhttp(url):
     print('Starting Playback...')
-    print(url)
     subprocess.Popen(
         ['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "' + url + '"] }\' | socat - /tmp/LMST-MPV-socket'],
         shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
