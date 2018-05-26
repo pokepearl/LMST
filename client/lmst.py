@@ -67,6 +67,8 @@ class LMSTShell(cmd.Cmd):
         downloaddb(readconfig("HTTP","host"),readconfig("HTTP","dbdirectory"),readconfig("HTTP","dbname"),readconfig("FILE","localdb"))
     def do_stop(self,arg):
         mpv_reset()
+    def do_playnext(self,arg):
+        mpv_playnext()
 if __name__ == '__main__':
     createconfig()
     startmpv()

@@ -22,13 +22,16 @@ def mpv_resume():
     subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["set_property", "pause", "no"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdout=subprocess.PIPE)
 def mpv_playhttp(url,append):
     print('Starting Playback...')
+    print(url)
     if append == "n":
         subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "'+url+'"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
     elif append == "y":
-        subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": ["loadfile", "' + url + ', "append-play"] }\' | socat - /tmp/LMST-MPV-socket'],shell=False, stdin=FNULL, stderr=FNULL, stdout=FNULL)
+        print('echo \'{ "command": [loadfile, "'+url+'", append] }\' | socat - /tmp/LMST-MPV-socket')
+        subprocess.Popen(['/bin/bash', '-c', 'echo \'{ "command": [loadfile, "'+url+'", append] }\' | socat - /tmp/LMST-MPV-socket'],shell=False)
 def mpv_reset():
     stopmpv()
     time.sleep(1)
     subprocess.Popen(
         'mpv --idle --no-audio-display --no-video --no-input-terminal --input-ipc-server=/tmp/LMST-MPV-socket',
         shell=True, encoding='UTF-8', stdin=FNULL, stderr=FNULL, stdout=FNULL)
+    time.sleep(2)
