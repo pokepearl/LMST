@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-import urllib
+import urllib.request
 import sqlite3
 from confighandler import *
 from mpvhandler import *
