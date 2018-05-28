@@ -4,7 +4,6 @@ import cmd
 from mpvhandler import *
 from confighandler import *
 from dbhandler import *
-import requests
 # Setup CMD commands
 class LMSTShell(cmd.Cmd):
     intro = 'Welcome to LMST. Type \'help\' for a list of commands'
