@@ -21,9 +21,9 @@ sudo sed -i 's:#Include conf-available/serve-cgi-bin.conf:#Include conf-availabl
 sudo systemctl restart apache2
 echo "[LMST-Server] Compiling Database Builder"
 cd /tmp/LMST/server/db_builder/
-pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt
 pip3 install cx_Freeze
-sudo python3 setup.py install
+sudo sudo python3 setup.py install
 cd /tmp
 sudo rm -rf LMST
 echo ""
