@@ -13,7 +13,7 @@ def downloaddb(host,folder,name,localdb):
     print('Downloading latest version of the Database from',dburl)
     urllib.request.urlretrieve(dburl, confpath+localdb)
 def readdb(type,index):
-    conn = sqlite3.connect(readconfig("HTTP","dbname"))
+    conn = sqlite3.connect(confpath+readconfig("HTTP","dbname"))
     cursor = conn.cursor()
     if type == "song":
         for row in cursor.execute('SELECT * FROM song WHERE id = \''+index+'\''):

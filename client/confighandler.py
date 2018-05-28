@@ -13,7 +13,7 @@ def createconfig():
         config['HTTP'] = {'host': 'http://',
                           'dbdirectory': '/cache/',
                           'dbname': 'lmst.db'}
-        config['FILE'] = {'localdb': 'files/lmst.db'}
+        config['FILE'] = {'localdb': 'lmst.db'}
         with open(confpath+'/lmstconf.ini', 'w') as configfile:
             config.write(configfile)
 def readconfig(section,field):
