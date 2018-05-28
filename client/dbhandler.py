@@ -4,11 +4,14 @@ import urllib.request
 import sqlite3
 from confighandler import *
 from mpvhandler import *
+from appdirs import *
+confpath = user_config_dir('LMST')
+os.makedirs(confpath, exist_ok=True)
 def downloaddb(host,folder,name,localdb):
     dburl = host+folder+name
     currentdir = os.getcwd()
     print('Downloading latest version of the Database from',dburl)
-    urllib.request.urlretrieve(dburl, currentdir+localdb)
+    urllib.request.urlretrieve(dburl, confpath+localdb)
 def readdb(type,index):
     conn = sqlite3.connect(readconfig("HTTP","dbname"))
     cursor = conn.cursor()
