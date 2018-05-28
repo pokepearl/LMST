@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c875fe6a-c1a1-4d5b-a307-a4cd779c1856" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confighandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/confighandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/db_builder/dbbuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/db_builder/dbbuilder.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,12 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1527306962143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/client$lmst.coverage" NAME="lmst Coverage Results" MODIFIED="1527490471984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/client$dbbuilder.coverage" NAME="dbbuilder Coverage Results" MODIFIED="1527306891952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../server/db_builder" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lmst.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lmst.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lmst.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -32,7 +34,7 @@
       <file leaf-file-name="dbhandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="375">
               <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
@@ -41,11 +43,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="confighandler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/confighandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding>
+                <element signature="e#23#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../server/db_builder/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="mpvhandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mpvhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="495">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding>
                 <element signature="e#23#40#0" expanded="true" />
               </folding>
@@ -53,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbbuilder.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbbuilder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="10" column="115" selection-start-line="10" selection-start-column="115" selection-end-line="10" selection-end-column="115" />
               <folding>
                 <element signature="e#23#37#0" expanded="true" />
               </folding>
@@ -89,13 +121,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/../server/db_builder/requirements.txt" />
-        <option value="$PROJECT_DIR$/confighandler.py" />
         <option value="$PROJECT_DIR$/lmstconf.ini" />
         <option value="$PROJECT_DIR$/dbhandler.py" />
-        <option value="$PROJECT_DIR$/mpvhandler.py" />
         <option value="$PROJECT_DIR$/lmst.py" />
+        <option value="$PROJECT_DIR$/mpvhandler.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/confighandler.py" />
         <option value="$PROJECT_DIR$/../server/db_builder/dbbuilder.py" />
       </list>
     </option>
@@ -552,7 +584,28 @@
       <option name="project" value="LOCAL" />
       <updated>1527306789819</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fix some Grep issues">
+      <created>1527490118543</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1527490118543</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Remove params which can potenially cause issues">
+      <created>1527490242306</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1527490242306</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Switch to appdirs to store configs">
+      <created>1527490398606</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1527490398606</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -615,8 +668,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create project for serverside database builder" />
-    <MESSAGE value="Prepare imports" />
     <MESSAGE value="Glob files in subdirectory and append to list" />
     <MESSAGE value="Start SQLite DB functions" />
     <MESSAGE value="Start Scraping metadata" />
@@ -640,16 +691,11 @@
     <MESSAGE value="Add MPV restart function" />
     <MESSAGE value="Update" />
     <MESSAGE value="Fix some Grep issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some Grep issues" />
+    <MESSAGE value="Remove params which can potenially cause issues" />
+    <MESSAGE value="Switch to appdirs to store configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switch to appdirs to store configs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lmstconf.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../server/db_builder/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -992,20 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/confighandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../server/db_builder/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lmstconf.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1020,9 +1052,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mpvhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#23#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbhandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="375">
           <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
@@ -1030,23 +1072,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mpvhandler.py">
+    <entry file="file://$PROJECT_DIR$/../server/db_builder/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#23#37#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1056,6 +1092,26 @@
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/confighandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="e#23#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../server/db_builder/dbbuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="115" selection-start-line="10" selection-start-column="115" selection-end-line="10" selection-end-column="115" />
+          <folding>
+            <element signature="e#23#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

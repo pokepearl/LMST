@@ -6,6 +6,7 @@ config = configparser.ConfigParser()
 confpath = user_config_dir('LMST')
 def createconfig():
     config = configparser.ConfigParser()
+    os.makedirs(confpath, exist_ok=True)
     if os.path.isfile(confpath+'/lmstconf.ini') == True:
         pass
     else:

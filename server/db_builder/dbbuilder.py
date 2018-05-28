@@ -8,7 +8,7 @@ import re
 import time
 import urllib.parse
 # Checking root folder, this should be rewritten
-dircheck = input('Is this script being run from the root directory of the LMST webserver? (yes/no): ')
+dircheck = input('Is this script being run from the root directory of the LMST webserver (/opt/LMST/web by default)? (yes/no): ')
 if dircheck == "yes":
     print('Continuing...')
 elif dircheck == "no":
