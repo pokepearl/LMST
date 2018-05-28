@@ -13,6 +13,7 @@ sudo mv *.php /opt/LMST/web
 echo "[LMST-Server] Configuring Apache server"
 sudo rm /etc/apache2/sites-enabled/lmstweb.conf
 sudo cp /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/lmstweb.conf
+sudo sed -i 's/Listen 80/Listen 80\nListen 9381/' /etc/apache2/sites-enabled/lmstweb.conf
 sudo sed -i 's/:80/:9381/' /etc/apache2/sites-enabled/lmstweb.conf
 sudo sed -i 's:/var/www/html:/opt/LMST/web:' /etc/apache2/sites-enabled/lmstweb.conf
 sudo sed -i 's:/#ServerName www.example.com:ServerName localhost:' /etc/apache2/sites-enabled/000-default.conf
